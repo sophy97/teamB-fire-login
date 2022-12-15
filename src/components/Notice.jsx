@@ -10,7 +10,7 @@ import Notice_Modal from './Notice_Modal';
 
 const Notice = () => {
     const preview4 = useSelector((state)=>(state.temperature.preview4))
-
+    /// 수정
     const data = useContext(DataContext);
     const [show,setShow] = useState(false);
     const [name,setName] = useState("");
@@ -55,7 +55,7 @@ const Notice = () => {
                         </ul>
                     </>
                 )}
-               <button className='plus_btn' onClick={()=>{
+                <button className='plus_btn' onClick={()=>{
                     setShow(true)
                 }}><FontAwesomeIcon icon={faPlus} /></button>
                 {show && <Notice_Modal setShow={setShow} />}
@@ -84,5 +84,5 @@ const Notice = () => {
         </div>
     );
 }
- 
+
 export default Notice;
